@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-preview-i18n-resource ../../../../lang_en.properties?>
+<?scenebuilder-stylesheet ../../../../main.css?>
+
+<StackPane fx:id="root" maxHeight="-1.0" maxWidth="-1.0" prefHeight="394.0" prefWidth="594.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ro.stancalau.springfx.gui.FirstPresentation">
+  <children>
+    <VBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0" StackPane.alignment="CENTER">
+      <children>
+        <Label text="%first.label.greeting" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS" />
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0" VBox.vgrow="ALWAYS">
+          <children>
+            <Button mnemonicParsing="false" onAction="#nextView" prefHeight="50.0" prefWidth="150.0" text="%first.button.nextview" HBox.hgrow="ALWAYS">
+              <HBox.margin>
+                <Insets />
+              </HBox.margin>
+            </Button>
+          </children>
+        </HBox>
+        <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0" VBox.vgrow="NEVER">
+          <children>
+            <RadioButton fx:id="engRadio" mnemonicParsing="false" selected="true" styleClass="label" text="%first.radio.english" HBox.hgrow="ALWAYS">
+              <toggleGroup>
+                <ToggleGroup fx:id="langGroup" />
+              </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="romRadio" mnemonicParsing="false" styleClass="label" text="%first.radio.romanian" toggleGroup="$langGroup" HBox.hgrow="ALWAYS" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+  <padding>
+    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+  </padding>
+</StackPane>

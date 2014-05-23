@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-preview-i18n-resource ../../../../lang_en.properties?>
+<?scenebuilder-stylesheet ../../../../main.css?>
+
+<StackPane prefHeight="200.0" prefWidth="320.0" styleClass="main-window" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ro.stancalau.springfx.gui.PopupPresentation">
+  <children>
+    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+      <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" text="%popup.label.headline" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+          <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+          </VBox.margin> 
+        </Label>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="5.0">
+          <children>
+            <Label text="%popup.label.message" />
+            <TextField fx:id="messageTf" maxWidth="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+            <Button minHeight="-1.0" mnemonicParsing="false" onAction="#onApply" prefHeight="-1.0" text="%popup.button.apply" HBox.hgrow="ALWAYS" />
+          </children>
+          <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+          </VBox.margin>
+        </HBox>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
+        <Button minWidth="80.0" mnemonicParsing="false" onAction="#clickedOk" text="%popup.button.ok" />
+      </children>
+      <padding>
+        <Insets bottom="10.0" top="10.0" />
+      </padding>
+    </VBox>
+  </children>
+</StackPane>

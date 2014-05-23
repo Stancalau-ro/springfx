@@ -1,0 +1,33 @@
+.main-window {
+ -fx-padding: 0;
+ -fx-background-color: #CAD2D7;
+ -fx-background-position: left top, left 19px top 15px ;
+ -fx-background-insets: 2,2,2,2;
+ -fx-border-color: #48BD31;
+ -fx-border-width: 3;
+}
+
+.label {
+	-fx-text-fill: #2D3438;
+	-fx-label-padding: 5,5,5,5;
+	-fx-font-family: "Tahoma"; 
+	-fx-font-size: 12; 
+}
+
+.button {
+    -fx-background-color: #48BD31;
+    -fx-background-insets: 1,1,1,1;
+    -fx-border-color: #48BD31;
+    -fx-border-width: 3;
+    -fx-padding: 3;
+    -fx-text-fill: #FFFFFF;
+	-fx-font-family: "Tahoma";
+	-fx-font-size: 14;
+	-fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: #2D3438;
+    -fx-border-color: #2D3438;
+    -fx-text-fill: #48BD31;
+}
