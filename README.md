@@ -1,1 +1,0 @@
-Source code for project documented here: http://stancalau.ro/javafx-and-spring/

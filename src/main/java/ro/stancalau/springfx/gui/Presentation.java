@@ -2,9 +2,9 @@ package ro.stancalau.springfx.gui;
 
 public abstract class Presentation {
 
-	protected ScreensConfig config;
+    protected ScreensConfig config;
 
-	public Presentation(ScreensConfig config) {
-		this.config = config;
-	}
+    public Presentation(ScreensConfig config) {
+        this.config = config;
+    }
 }

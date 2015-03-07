@@ -4,49 +4,47 @@ import java.util.Locale;
 import java.util.Observable;
 import java.util.ResourceBundle;
 
-public class LanguageModel extends Observable{
-	
-	private ResourceBundle bundle;
-	private Language lang;
-	
-	public LanguageModel(){
-		setBundle(Language.EN);
-	}
+public class LanguageModel extends Observable {
 
-	public ResourceBundle getBundle() {
-		return bundle;
-	}
+    private ResourceBundle bundle;
+    private Language lang;
 
-	public void setBundle(Language lang) {
-		if ( lang==null || lang.equals(this.bundle)) return;
-		setLanguage(lang);
-		bundle = ResourceBundle.getBundle("lang", new Locale(lang.getValue(), lang.toString()));
-		setChanged();
-		notifyObservers();
-	}
+    public LanguageModel() {
+        setBundle(Language.EN);
+    }
 
-	public Language getLanguage() {
-		return lang;
-	}
+    public ResourceBundle getBundle() {
+        return bundle;
+    }
 
-	private void setLanguage(Language lang) {
-		this.lang = lang;
-	}
+    public void setBundle(Language lang) {
+        if (lang == null || lang.equals(this.bundle)) return;
+        setLanguage(lang);
+        bundle = ResourceBundle.getBundle("lang", new Locale(lang.getValue(), lang.toString()));
+        setChanged();
+        notifyObservers();
+    }
 
-	public enum Language{
-		
-		EN("en"), RO("ro");
-		
-		private String value;
-		
-		private Language(String s){
-			value=s;
-		}
-		
-		public String getValue(){
-			return value;
-		}
-		
-	}
+    public Language getLanguage() {
+        return lang;
+    }
 
+    private void setLanguage(Language lang) {
+        this.lang = lang;
+    }
+
+    public enum Language {
+
+        EN("en"), RO("ro");
+
+        private String value;
+
+        Language(String s) {
+            value = s;
+        }
+
+        public String getValue() {
+            return value;
+        }
+    }
 }
