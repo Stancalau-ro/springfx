@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply from: 'javafx.plugin'
+
+if (!JavaVersion.current().isJava8Compatible()) {
+    throw new RuntimeException("Java 8 required, ${System.getPropertybuild("java.version")} found")
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile(
+            [group: 'log4j', name: 'log4j', version: '1.2.17'],
+            [group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.0-rc1'],
+            [group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.0-rc1'],
+            [group: 'org.springframework', name: 'spring-context', version: '4.1.5.RELEASE'],
+            [group: 'org.springframework.boot', name: 'spring-boot-starter-remote-shell', version: '1.0.0.RELEASE']
+    )
+}
+
+javafx {
+    appID 'JavaFx'
+    appName 'SpringFX'
+    mainClass = 'ro.stancalau.springfx.gui.Main'
+}
