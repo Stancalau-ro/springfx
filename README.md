@@ -1,6 +1,6 @@
 # SpringFX #
 
-An short project that exemplifies how you can integrate Spring with JavaFX.
+A short project that exemplifies how you can integrate Spring with JavaFX.
 
 ### Prerequisites ###
 
