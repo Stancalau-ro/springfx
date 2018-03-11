@@ -5,7 +5,6 @@ import java.util.Observable;
 import java.util.ResourceBundle;
 
 public class LanguageModel extends Observable {
-
     private ResourceBundle bundle;
     private Language lang;
 
@@ -18,7 +17,9 @@ public class LanguageModel extends Observable {
     }
 
     public void setBundle(Language lang) {
-        if (lang == null || lang.equals(this.bundle)) return;
+        if (lang == null || lang.equals(this.bundle)) {
+		    return;
+        }
         setLanguage(lang);
         bundle = ResourceBundle.getBundle("lang", new Locale(lang.getValue(), lang.toString()));
         setChanged();

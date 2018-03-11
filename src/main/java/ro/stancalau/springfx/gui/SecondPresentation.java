@@ -13,42 +13,41 @@ import ro.stancalau.springfx.model.MessageModel;
 
 public class SecondPresentation extends Presentation {
 
-	public SecondPresentation(ScreensConfig config) {
-		super(config);
-	}
-	
-	@Autowired
-	private MessageModel model;
-	
-	@FXML
-	TextField messageTf;
-	
-	@FXML
-	void initialize() {
-		messageTf.setText(model.getMessage());
-		
-		model.addObserver(new Observer() {
-			
-			public void update(Observable o, Object arg) {
-				messageTf.setText(model.getMessage());
-			}
-		});
-	}
-	
-	@FXML 
-	void onApply(ActionEvent event){
-		model.setMessage(messageTf.getText());
-	}
-	
-	@FXML
-	void prevView(ActionEvent event){
-		config.loadFirst();
-	}
-	
-	@FXML 
-	void openPopup(ActionEvent event){
-		config.loadPopup();
-	}
-	
+    public SecondPresentation(ScreensConfig config) {
+        super(config);
+    }
+
+    @Autowired
+    private MessageModel model;
+
+    @FXML
+    TextField messageTf;
+
+    @FXML
+    void initialize() {
+        messageTf.setText(model.getMessage());
+
+        model.addObserver(new Observer() {
+            public void update(Observable o, Object arg) {
+                messageTf.setText(model.getMessage());
+            }
+        });
+    }
+
+    @FXML
+    void onApply(ActionEvent event) {
+        model.setMessage(messageTf.getText());
+    }
+
+    @FXML
+    void prevView(ActionEvent event) {
+        config.loadFirst();
+    }
+
+    @FXML
+    void openPopup(ActionEvent event) {
+        config.loadPopup();
+    }
+
 
 }
